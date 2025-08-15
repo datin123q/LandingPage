@@ -1,0 +1,11 @@
+@use '../abstracts' as abs;
+
+
+.btn {
+  background: abs.$primary-color;
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+
+}

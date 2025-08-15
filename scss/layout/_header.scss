@@ -1,0 +1,23 @@
+@use '../abstracts' as abs;
+
+.header {
+  background-color: abs.$background-color;
+  color: black;
+  padding: 25px 80px;
+  @include abs.flex-between;
+
+  p{
+    @include abs.font('Clash Display' ,24px , #22202E);
+  }
+
+  nav {
+    @include abs.flex-between;
+    gap: 44px;
+
+    a {
+      @include abs.font(null ,null , #726E8D);
+      text-decoration: none;
+      gap: 44px;
+    }
+  }
+}

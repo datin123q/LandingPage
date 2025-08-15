@@ -1,0 +1,85 @@
+@use '../abstracts' as abs;
+@use './button' as *; 
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: abs.$font-main;
+  color: abs.$text-color;
+
+  &__gallery {
+    img { width: 100%; display: block; }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 50px 60px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0 0 40px;
+    .title{
+      @include abs.font('Clash Display' ,36PX , #2A254B);
+      justify-self: center;
+    }
+    .price{
+      @include abs.font('Satoshi' ,24PX , #12131A);
+    }
+    
+  }
+
+  &__description {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p{
+      @include abs.font('Satoshi' ,16PX , #505977)
+    }
+    ul{
+      list-style-position: inside;
+      @include abs.font('Satoshi' ,16PX , #505977)
+    }
+  }
+  &__dimension{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 28px;
+    p{
+      @include abs.font('Clash Display', 16px, Dimensions)
+    }
+    .metric{
+      display: flex;
+      gap: 57px;
+    }
+    .metric-column{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  &__amount{
+    @include abs.flex-between;
+    align-items: center;
+    &-quantity{
+      align-self: center;
+      justify-content: center;
+      @include abs.flex-between;
+      margin: 27px 0 0 40px;
+      gap: 22px;
+    }
+    button{
+      @extend .btn;
+    }
+  }
+
+  @include abs.respond(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
