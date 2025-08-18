@@ -1,0 +1,45 @@
+@use '../abstracts' as abs;
+@use './button' as *; 
+.signup{
+    background: #F9F9F9;
+    padding: 60px 80px;
+    @include abs.respond() {background: white; padding: 48px 24px}
+    &__container{
+        @include abs.flex-column;
+        text-align: center;
+        gap: 60px;
+        background: white;
+        
+        &__text{
+            @include abs.flex-column;
+            gap: 25px;
+            margin-top: 60px;
+            @include abs.respond() {margin: 0;  align-items: flex-start;             }
+            h1{
+                @include abs.font('Clash Display' ,36PX , #2A254B,1.4);
+                @include abs.respond() {@include abs.font('Clash Display' ,20PX , #2A254B,1.4)}
+
+            }
+            p{
+                @include abs.font('Satoshi' ,16PX , #2A254B,1.5);
+                  width: 60%;
+                  @include abs.respond() {@include abs.font('Clash Display' ,14PX , #2A254B,1.4);width: 100%; text-align: left;}
+            }
+        }
+        &__input{
+            display: flex;
+            input{
+                padding: 16px 200px 16px 32px;
+                border: none;
+                outline: none;
+                background: #f9f9f9;
+                @include abs.font('Satoshi' ,16PX , #2A254B,1.0);
+                @include abs.respond() {padding:16px 32px}
+            }
+            
+            button{
+                @extend .btn;
+            }
+        }
+    }
+}

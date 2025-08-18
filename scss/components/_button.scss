@@ -6,6 +6,8 @@
   color: white;
   padding: 16px 32px;
   border: none;
+  white-space: nowrap;  
   cursor: pointer;
+  @include abs.font('Satoshi' ,16PX , white,1.5);
 
 }

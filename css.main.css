@@ -35,9 +35,6 @@ body {
   color: #22202E;
   line-height: 1.5;
 }
-.header .iconmenu {
-  display: none;
-}
 .header nav {
   display: flex;
   justify-content: space-between;
@@ -54,14 +51,8 @@ body {
   gap: 44px;
 }
 @media (max-width: 768px) {
-  .header {
-    padding: 20px 24px;
-  }
   .header nav {
     display: none;
-  }
-  .header .iconmenu {
-    display: inline;
   }
 }
 
@@ -116,7 +107,6 @@ footer .footer-address__address p {
   font-size: 14PX;
   color: white;
   line-height: 1;
-  text-align: left;
 }
 footer .footer-social {
   display: flex;
@@ -166,7 +156,6 @@ footer .footer-menu p, footer .footer-category p, footer .footer-company p {
   font-size: 14PX;
   color: white;
   line-height: 1;
-  text-align: left;
 }
 footer .footer-menu p:nth-child(1), footer .footer-category p:nth-child(1), footer .footer-company p:nth-child(1) {
   font-family: "Clash Display", sans-serif;
@@ -181,21 +170,15 @@ footer .footer-menu p:nth-child(1), footer .footer-category p:nth-child(1), foot
     display: none;
   }
 }
+footer .footer-unline {
+  margin-top: 30PX;
+}
 footer .footer-unline .line {
-  margin: 30PX 80px;
   height: 1px;
   background: #4E4D93;
-  width: calc(100% - 160px);
-}
-@media (max-width: 768px) {
-  footer .footer-unline .line {
-    margin: 0PX 24px 20px 24px;
-    width: calc(100% - 48px);
-  }
+  width: 100%;
 }
 footer .footer-unline p {
-  margin-left: 80px;
-  text-align: left;
   background: #2A254B;
   font-family: "Satoshi", sans-serif;
   font-style: normal;
@@ -203,12 +186,6 @@ footer .footer-unline p {
   font-size: 14PX;
   color: white;
   line-height: 1;
-}
-@media (max-width: 768px) {
-  footer .footer-unline p {
-    text-align: center;
-    margin: 0;
-  }
 }
 
 .banner {
@@ -252,7 +229,7 @@ footer .footer-unline p {
 .btn, .signup__container__input button, .product-detail__amount button {
   background: #2a254b;
   color: white;
-  padding: 16px 32px;
+  padding: 16px 40px;
   border: none;
   white-space: nowrap;
   cursor: pointer;
@@ -551,8 +528,7 @@ footer .footer-unline p {
 }
 @media (max-width: 768px) {
   .product-detail__amount button {
-    width: calc(100% - 0px);
-    padding: 16px 0px;
+    width: 100%;
   }
 }
 
@@ -737,4 +713,4 @@ footer .footer-unline p {
   padding: 40px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=css.main.css.map */

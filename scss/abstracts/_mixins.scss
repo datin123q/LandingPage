@@ -5,18 +5,20 @@
   justify-content: space-between;
   align-items: center;
 }
-@mixin font($font-family: 'Satoshi', $font-size:16px, $color: white){
-    font-family: $font-family;
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin font($font-family: 'Satoshi', $font-size:16px, $color: white, $lh: 1.5){
+    font-family: $font-family, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: $font-size;
-    line-height: 22px;
     color: $color;
+    line-height: $lh;
 }
-@mixin respond($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 576px) { @content; }
-  } @else if $breakpoint == tablet {
+@mixin respond() {
     @media (max-width: 768px) { @content; }
-  }
 }

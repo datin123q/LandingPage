@@ -1,0 +1,32 @@
+@use '../abstracts' as abs;
+.feature{
+    width: 100%;
+    padding: 60px 80px;
+    @include abs.flex-column;
+    gap: 50px;
+    @include abs.respond() {padding: 48px 24px; };
+    &__title{
+        h3{
+            @include abs.font('Clash Display' ,24PX , #2A254B,1.4);
+            @include abs.respond() {@include abs.font('Clash Display' ,20PX , #2A254B,1.4); text-align: left };
+        }
+    }
+    &__list{
+        width: 100%;
+        @include abs.flex-between;
+        @include abs.respond() {@include abs.flex-column;gap: 35px;align-items: flex-start}
+        &__block{
+            @include abs.flex-column;
+            align-items: flex-start;
+            gap: 20px;
+            width: 260px;  
+            h4{
+                @include abs.font('Clash Display' ,20PX , #2A254B,1.4);
+            }
+            p{
+                @include abs.font('Clash Display' ,16PX , #2A254B,1.5);
+            }
+            @include abs.respond() {gap: 16px; width: 100%;}
+        }
+    }
+}

@@ -1,6 +1,96 @@
-.footer {
-  background: #111;
-  color: white;
-  padding: 20px;
+@use '../abstracts' as abs;
+footer{
   text-align: center;
+  padding: 15px;
+  background: #2A254B;
+  color: white;
+  .footer {
+
+  display: flex;
+  justify-content: space-around;
+  
+  @include abs.respond() {
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+    align-items: baseline
+  }
+
+
+  &-address{
+      @include abs.flex-column;
+      align-items: flex-start;
+      gap: 15px;
+      &__logo{
+        @include abs.font('Clash Display' ,36PX , white,1.4);
+      }
+      &__address{
+        @include abs.flex-column;
+        align-items: flex-start;
+        gap: 12px;
+        p{
+          @include abs.font('Satoshi' ,14PX , white,1.0);
+          text-align: left;
+        }
+      }
+    }
+    &-social{
+      @include abs.flex-column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      &__title{
+        @include abs.font('Clash Display' ,16PX , white,1.0);
+      }
+      &__icon{
+        @include abs.flex-between;
+        flex-wrap: wrap;
+        gap: 24px;
+        @include abs.respond() {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 24px;
+        }
+      }
+    }
+    &-menu, &-category, &-company{
+      @include abs.flex-column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 12px;
+      p{
+        @include abs.font('Satoshi' ,14PX , white,1.0);
+        text-align: left;
+      }
+      p:nth-child(1){
+        @include abs.font('Clash Display' ,16PX , white,1.0);
+      }
+    }
+    @include abs.respond() {&-category{
+      display: none;
+    }}
+}
+.footer-unline{
+  
+  .line{
+  margin: 30PX 80px;
+  height: 1px;
+  background: #4E4D93;
+  width: calc(100% - 160px);
+  @include abs.respond() {
+    margin: 0PX 24px 20px 24px;
+    width: calc(100% - 48px);
+  }
+}
+  p{
+    margin-left: 80px;
+    text-align: left;
+    background: #2A254B;
+    @include abs.font('Satoshi' ,14PX , white,1.0);
+    @include abs.respond() {text-align: center; margin: 0;}
+  }
+}
 }

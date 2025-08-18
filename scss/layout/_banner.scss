@@ -7,7 +7,6 @@
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 19px;
         color: abs.$background-color;
 
     }
@@ -15,4 +14,16 @@
         @include abs.flex-between;
         margin: 0 auto;
     }
+    @include abs.respond() {
+        padding: 8px 16px;
+        gap: 16px;
+        &-content{
+            display: flex;
+            gap: 8px;
+        }
+        p{
+            @include abs.font('Satoshi' ,14PX , #ffffff,1.0);
+        }
+
+  }
 }

@@ -1,0 +1,49 @@
+@use '../abstracts' as abs;
+.product-card{
+  display: flex;
+  flex-direction: column;
+  margin: 150px 80px 80px 80px;
+  @include abs.respond() {margin: 30px 0};
+  gap: 50px;
+  .product-listing{
+    @include abs.flex-between;
+    @include abs.respond() {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 0 24px;
+    };
+    gap: 24px;
+    &__card{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      &__parent{
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+      &__detail{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        &__title{
+          @include abs.font('Clash Display' ,20PX , #2A254B,1.4);
+        }
+        &__price{
+          @include abs.font('Clash Display' ,18PX , #2A254B,1.5);
+        }
+      }
+
+    }
+  }
+  &__button{
+    align-self: center;
+    padding: 20px 32px;
+    @include abs.font('Satoshi' ,16PX , #2A254B,1.5);
+    background: #F9F9F9;
+    @include abs.respond() {width: 100%; text-align: center };
+  }
+}

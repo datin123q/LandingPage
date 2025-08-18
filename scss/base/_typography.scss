@@ -1,5 +1,12 @@
 body {
-  font-family: 'Arial', sans-serif;
-  color: #2a254b;
-  line-height: 1.5;
+  margin: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
 }
+.main{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden; 
+}
+

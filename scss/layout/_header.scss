@@ -9,15 +9,26 @@
   p{
     @include abs.font('Clash Display' ,24px , #22202E);
   }
-
+      .iconmenu{
+      display: none
+    }
   nav {
     @include abs.flex-between;
     gap: 44px;
-
     a {
       @include abs.font(null ,null , #726E8D);
       text-decoration: none;
       gap: 44px;
     }
+  }
+  @include abs.respond() {
+    padding: 20px 24px;
+    nav {
+      display: none;
+    }
+    .iconmenu{
+      display: inline;
+    }
+
   }
 }
