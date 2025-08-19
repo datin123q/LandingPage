@@ -23,7 +23,7 @@
             p{
                 @include abs.font('Satoshi' ,16PX , #2A254B,1.5);
                   width: 60%;
-                  @include abs.respond() {@include abs.font('Clash Display' ,14PX , #2A254B,1.4);width: 100%; text-align: left;}
+                  @include abs.respond() {@include abs.font('Satoshi' ,14PX , #2A254B,1.5);width: 100%; text-align: left;}
             }
         }
         &__input{

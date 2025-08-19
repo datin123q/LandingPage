@@ -299,7 +299,7 @@ footer .footer-unline p {
 }
 @media (max-width: 800px) {
   .product-card {
-    margin: 30px 0;
+    margin: 48px 0;
   }
 }
 .product-card__title {
@@ -402,6 +402,17 @@ footer .footer-unline p {
   height: 100%;
   object-fit: cover;
 }
+.product-detail__gallery__image2 {
+  display: none;
+}
+@media (max-width: 800px) {
+  .product-detail__gallery__image1 {
+    display: none;
+  }
+  .product-detail__gallery__image2 {
+    display: block;
+  }
+}
 .product-detail__info {
   display: flex;
   flex-direction: column;
@@ -410,7 +421,7 @@ footer .footer-unline p {
 }
 @media (max-width: 800px) {
   .product-detail__info {
-    margin: 22px 0px 22px 0;
+    margin: 22px 0px 48px 0;
     gap: 28px;
   }
 }
@@ -487,8 +498,8 @@ footer .footer-unline p {
     font-style: normal;
     font-weight: 400;
     font-size: 14PX;
-    color: #505977;
-    line-height: 1.4;
+    color: #2A254B;
+    line-height: 1.5;
   }
 }
 .product-detail__description ul {
@@ -506,7 +517,7 @@ footer .footer-unline p {
     font-style: normal;
     font-weight: 400;
     font-size: 14PX;
-    color: #505977;
+    color: #2A254B;
     line-height: 1.5;
   }
 }
@@ -523,12 +534,12 @@ footer .footer-unline p {
   }
 }
 .product-detail__dimension p {
-  font-family: "Clash Display", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #2A254B;
-  line-height: 1.4;
+  line-height: 20px;
 }
 .product-detail__dimension .metric {
   display: flex;
@@ -649,9 +660,10 @@ footer .footer-unline p {
 @media (max-width: 800px) {
   .feature {
     padding: 48px 24px;
+    align-items: flex-start;
   }
 }
-.feature__title h3 {
+.feature__title h4 {
   font-family: "Clash Display", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -660,14 +672,15 @@ footer .footer-unline p {
   line-height: 1.4;
 }
 @media (max-width: 800px) {
-  .feature__title h3 {
+  .feature__title h4 {
     font-family: "Clash Display", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20PX;
     color: #2A254B;
     line-height: 1.4;
-    text-align: left;
+    width: 80%;
+    align-items: flex-start;
   }
 }
 .feature__list {
@@ -791,12 +804,12 @@ footer .footer-unline p {
 }
 @media (max-width: 800px) {
   .signup__container__text p {
-    font-family: "Clash Display", sans-serif;
+    font-family: "Satoshi", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14PX;
     color: #2A254B;
-    line-height: 1.4;
+    line-height: 1.5;
     width: 100%;
     text-align: left;
   }
