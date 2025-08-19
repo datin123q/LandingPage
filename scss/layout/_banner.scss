@@ -22,7 +22,7 @@
             gap: 8px;
         }
         p{
-            @include abs.font('Satoshi' ,14PX , #ffffff,1.0);
+            @include abs.font('Satoshi' ,14PX , #ffffff,19px);
         }
 
   }

@@ -15,11 +15,17 @@
   nav {
     @include abs.flex-between;
     gap: 44px;
+
     a {
       @include abs.font(null ,null , #726E8D);
       text-decoration: none;
       gap: 44px;
+      white-space: nowrap;
     }
+  }
+  &-icon{
+    @include abs.flex-between;
+    gap: 16px;
   }
   @include abs.respond() {
     padding: 20px 24px;

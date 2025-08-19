@@ -18,7 +18,15 @@
     font-size: $font-size;
     color: $color;
     line-height: $lh;
+    
 }
 @mixin respond() {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 800px) { @content; }
 }
+/* 21 New York Street */
+
+
+
+
+
+

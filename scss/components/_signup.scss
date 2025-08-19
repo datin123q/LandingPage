@@ -14,7 +14,7 @@
             @include abs.flex-column;
             gap: 25px;
             margin-top: 60px;
-            @include abs.respond() {margin: 0;  align-items: flex-start;             }
+            @include abs.respond() {margin: 0;  align-items: flex-start;        }
             h1{
                 @include abs.font('Clash Display' ,36PX , #2A254B,1.4);
                 @include abs.respond() {@include abs.font('Clash Display' ,20PX , #2A254B,1.4)}
@@ -28,13 +28,15 @@
         }
         &__input{
             display: flex;
+            margin-bottom: 60px;
+            @include abs.respond() {margin-bottom: 0}
             input{
                 padding: 16px 200px 16px 32px;
                 border: none;
                 outline: none;
                 background: #f9f9f9;
-                @include abs.font('Satoshi' ,16PX , #2A254B,1.0);
-                @include abs.respond() {padding:16px 32px}
+                @include abs.font('Satoshi' ,16PX , #2A254B,22px);
+                @include abs.respond() {padding:16px 32px;}
             }
             
             button{

@@ -18,6 +18,7 @@
         &__block{
             @include abs.flex-column;
             align-items: flex-start;
+            align-self: flex-start;
             gap: 20px;
             width: 260px;  
             h4{

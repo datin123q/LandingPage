@@ -2,21 +2,23 @@
 @use './button' as *; 
 .product-detail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   @include abs.respond() {grid-template-columns: 1fr;};
   font-family: abs.$font-main;
   color: #ffffff;
 
   &__gallery {
-    img { width: 100%; display: block; }
+    img {   width: 100%;
+  height: 100%;
+  object-fit: cover;  }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
     margin: 50px 60px;
-    @include abs.respond() {margin: 0};
+    @include abs.respond() {margin: 22px 0px 22px 0; gap: 28px};
   }
 
   &__title {
@@ -26,18 +28,17 @@
     padding: 40px 0 0 40px;
     @include abs.respond() {padding: 18px 24px};
     &__name{
-      @include abs.font('Clash Display' ,36PX , #2A254B,1.0);
-      padding: 6px 0px;
+      @include abs.font('Clash Display' ,36PX , #2A254B,44px);
       justify-self: center;
-      @include abs.respond() {@include abs.font('Clash Display' ,24PX , #2A254B,1.0);};
+      @include abs.respond() {@include abs.font('Clash Display' ,24PX , #2A254B,1.4);};
     }
     &__price{
-      @include abs.font('Satoshi' ,24PX , #12131A,1.0);
-      padding: 4px 0px;
-      @include abs.respond() {@include abs.font('Clash Display' ,20PX , #2A254B,1.0);};
+      @include abs.font('Satoshi' ,24PX , #12131A,32px);
+      @include abs.respond() {@include abs.font('Clash Display' ,20PX , #2A254B,1.4);};
     }
     
   }
+  
 
   &__description {
     padding: 40px;
@@ -47,24 +48,25 @@
     @include abs.respond() {padding: 0 24px;};
 
     p{
-      @include abs.font('Satoshi' ,16PX , #505977,1.0);
-      @include abs.respond() {@include abs.font('Satoshi' ,14PX , #505977,1.0)};
+      @include abs.font('Satoshi' ,16PX , #505977,22px);
+      @include abs.respond() {@include abs.font('Satoshi' ,14PX , #505977,1.4)};
     }
     ul{
       list-style-position: inside;
-      @include abs.font('Satoshi' ,16PX , #505977,1.0);
-      @include abs.respond() {@include abs.font('Satoshi' ,14PX , #505977,1.0)};
+      @include abs.font('Satoshi' ,16PX , #505977,22px);
+      @include abs.respond() {@include abs.font('Satoshi' ,14PX , #505977,1.5)};
     }
   }
+  
   &__dimension{
     display: flex;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 20px 40px;
     gap: 28px;
     @include abs.respond() {padding: 0 24px; gap: 16px};
 
     p{
-      @include abs.font('Clash Display', 16px, #2A254B,1.0)
+      @include abs.font('Clash Display', 16px, #2A254B,1.4)
     }
     .metric{
       display: flex;
@@ -81,25 +83,27 @@
     @include abs.flex-between;
     margin: 27px 0 0 40px;
     max-width: 100%;
-    @include abs.respond() {@include abs.flex-column; padding: 0 24px;margin: 0};
+    @include abs.respond() {@include abs.flex-column; padding: 0 24px;margin: 0; gap: 20px};
     &__quantity{
-      @include abs.flex-between;
+      display: flex;
+      justify-content: flex-start;
       gap: 22px;
-
+      width: 100%;
       &__amount{
         padding: 15px 22px;
-        @include abs.font('Clash Display' ,16PX , #2A254B,1.0)
+        @include abs.font('Clash Display' ,16PX , #2A254B,1.4);
+        @include abs.respond() {align-self: flex-start;}
         
       }
       &__steppy{
+        display: flex;
         text-align: center;
         padding: 12px 16px;
+        background: #F9F9F9;
         @include abs.flex-between;
-        button{
-            background: none;
-            font-size: 16px;
-            cursor: pointer;
-            color: #CAC6DA;
+        gap: 30px;
+        p{
+          @include abs.font('Satoshi' ,16PX , #2A254B,22px)
         }
         input{
             width: 30px;
@@ -109,10 +113,22 @@
             font-size: 16px;
         }
       }
+      @include abs.respond() {
+        display: flex;
+        flex-direction: column;
+        &__amount{
+          padding: 0;
+        }
+        &__steppy{
+          padding: 12px 16px;
+          text-align: center;
+          gap: 33px;
+        }
+      }
     }
     button{
       @extend .btn;
-      @include abs.respond() {width: calc(100% - 0px);padding: 16px 0px };
+       @include abs.respond() {width: 100%;padding: 16px 0px };
     
     }
   }
