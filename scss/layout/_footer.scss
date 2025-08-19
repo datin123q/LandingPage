@@ -1,9 +1,9 @@
 @use '../abstracts' as abs;
 footer{
   text-align: center;
-  padding: 15px;
   background: #2A254B;
   color: white;
+  padding-bottom: 25px;
   .footer {
   padding: 54px 80px;
   display: flex;
@@ -94,7 +94,7 @@ footer{
 .footer-unline{
   
   .line{
-  margin: 0PX 80px 30px 80px;
+  margin: 0PX 80px 25px 80px;
   height: 1px;
   background: #4E4D93;
   width: calc(100% - 160px);

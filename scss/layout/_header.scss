@@ -15,7 +15,7 @@
   nav {
     @include abs.flex-between;
     gap: 44px;
-
+    margin-left: -150px;
     a {
       @include abs.font(null ,null , #726E8D);
       text-decoration: none;

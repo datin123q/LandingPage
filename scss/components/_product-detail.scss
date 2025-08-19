@@ -90,7 +90,7 @@
       gap: 22px;
       width: 100%;
       &__amount{
-        padding: 15px 22px;
+        padding: 15px 0px;
         @include abs.font('Clash Display' ,16PX , #2A254B,1.4);
         @include abs.respond() {align-self: flex-start;}
         
@@ -103,6 +103,9 @@
         @include abs.flex-between;
         gap: 30px;
         p{
+          @include abs.font('Satoshi' ,16PX , #CAC6DA,22px)
+        }
+        h4{
           @include abs.font('Satoshi' ,16PX , #2A254B,22px)
         }
         input{
@@ -120,9 +123,10 @@
           padding: 0;
         }
         &__steppy{
+          justify-content: center;
           padding: 12px 16px;
           text-align: center;
-          gap: 33px;
+
         }
       }
     }

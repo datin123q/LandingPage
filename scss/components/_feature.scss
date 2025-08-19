@@ -23,11 +23,14 @@
             width: 260px;  
             h4{
                 @include abs.font('Clash Display' ,20PX , #2A254B,1.4);
+                @include abs.respond() {font-size: 16px};
             }
             p{
-                @include abs.font('Clash Display' ,16PX , #2A254B,1.5);
+                @include abs.font('Satoshi' ,16PX , #2A254B,1.5);
+                @include abs.respond() {font-size: 14px}
             }
-            @include abs.respond() {gap: 16px; width: 100%;}
+            @include abs.respond() {gap: 16px; width: 100%;
+            }
         }
     }
 }
