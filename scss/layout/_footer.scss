@@ -5,6 +5,8 @@ footer{
   color: white;
   padding-bottom: 25px;
   .footer {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 54px 80px;
   display: flex;
   justify-content: space-between;
@@ -92,7 +94,8 @@ footer{
   }
 }
 .footer-unline{
-  
+    max-width: 1440px;
+  margin: 0 auto;
   .line{
   margin: 0PX 80px 25px 80px;
   height: 1px;

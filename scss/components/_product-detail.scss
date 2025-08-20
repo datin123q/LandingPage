@@ -2,6 +2,8 @@
 @use './button' as *; 
 .product-detail {
   display: grid;
+    max-width: 1440px;
+  margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   @include abs.respond() {grid-template-columns: 1fr;};
   font-family: abs.$font-main;

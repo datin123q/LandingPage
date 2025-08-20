@@ -2,15 +2,16 @@
 .product-card{
   display: flex;
   flex-direction: column;
-  margin: 150px 80px 80px 80px;
-  @include abs.respond() {margin: 48px 0};
+  padding: 150px 80px 80px 80px;
+  max-width: 1440px;
+  margin: 0px auto;
+  @include abs.respond() {padding: 48px 24px};
   gap: 20px;
   &__title{
     display: none;
     @include abs.font('Clash Display' ,20PX , #2A254B,25px);
     @include abs.respond() {
       display: block;
-      margin-left: 24px;
     }
   }
   .product-listing{
@@ -20,7 +21,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      padding: 0px 24px;
   .product-listing__card:nth-child(2) .product-listing__card__detail,
   .product-listing__card:nth-child(3) .product-listing__card__detail,
   .product-listing__card:nth-child(4) .product-listing__card__detail {
@@ -64,6 +64,6 @@
     padding: 20px 32px;
     @include abs.font('Satoshi' ,16PX , #2A254B,1.5);
     background: #F9F9F9;
-    @include abs.respond() {width: 100%; text-align: center };
+    @include abs.respond() {width: 100%; text-align: center; };
   }
 }

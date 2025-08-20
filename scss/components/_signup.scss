@@ -3,6 +3,8 @@
 .signup{
     background: #F9F9F9;
     padding: 60px 80px;
+    max-width: 1440px;
+    margin: 0 auto;
     @include abs.respond() {background: white; padding: 48px 24px}
     &__container{
         @include abs.flex-column;
